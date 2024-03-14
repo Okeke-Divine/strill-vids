@@ -1,0 +1,52 @@
+576px for portrait phones
+768px for tablets
+992px for laptops
+1200px for large devices
+
+Common screen sizes
+Mobile: 360 x 640
+Mobile: 375 x 667
+Mobile: 360 x 720
+iPhone X: 375 x 812
+Pixel 2: 411 x 731
+Tablet: 768 x 1024
+Laptop: 1366 x 768
+High-res laptop or desktop: 1920 x 1080
+
+
+1280px 
+1024px 
+768px 
+640px 
+
+
+
+
+Breakpoint	Dimensions
+X-Small	< 576px
+Small	≥ 576px
+Medium	≥ 768px
+Large	≥ 992px
+Extra large	≥ 1200px
+Extra extra large	≥ 1400px
+
+
+
+Foundation: <640px, ≥640px, ≥1200px
+Bulma: <769px, ≥769px, ≥1024px, ≥1216px, and ≥1408px
+Semantic UI: <768px, ≥768px, ≥992px, ≥1400px, ≥1920px
+Primer: <544px, ≥544px, ≥768px, ≥1012px, ≥1280px
+UIKit: <479px, ≥480px, ≥768px, ≥960px, ≥1200px
+
+
+PureCSS has seven default breakpoints:
+
+Key	CSS Media Query	Applies
+none	none	< 568px
+sm	@media screen and (min-width: 35.5em)	≥568px
+md	@media screen and (min-width: 48em)	≥768px
+lg	@media screen and (min-width: 64em)	≥1024px
+xl	@media screen and (min-width: 80em)	≥1280px
+xxl	@media screen and (min-width: 120em)	≥1920px
+xxxl	@media screen and (min-width: 160em)	≥2560px
+x4k	@media screen and (min-width: 240em)	≥3840px

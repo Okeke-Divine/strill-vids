@@ -1,0 +1,28 @@
+{
+    "application_name": "Strill Vids",
+    "socials": {
+        "whatsapp": "https://wa.me/+2340000000000",
+        "facebook": "https://web.facebook.com/skrill",
+        "instagram": "https://www.instagram.com/skrill",
+        "twitter": "https://twitter.com/skrill",
+        "youtube": "https://www.youtube.com/skril",
+        "rss-feed": "https://rss.com/skrill"
+    },
+    "creator": "Okeke Divine-Vessel",
+    "creators-socials": {
+        "whatsapp": "https://wa.me/+2347064878285",
+        "linkedin": "https://www.linkedin.com/in/okeke-divine-vessel/",
+        "github": "https://github.com/Okeke-Divine/",
+        "portfoilo": ""
+    },
+    "backends": {
+        "backend_server_1": "http://localhost:8083",
+        "media_server": "http://localhost:8082"
+    },
+    "picture_resolution": {
+        "horizontal": "1200x628",
+        "vertical": "342x513"
+    },
+    "date_started": "19th September, 2023",
+    "year_started": "2023"
+}

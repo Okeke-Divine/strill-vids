@@ -1,0 +1,40 @@
+mediaassets port = 8082
+backend port = 8083
+frontend port = 3000
+
+
+
+To add a route for search with query parameters like q, sort_by, and limit, you can modify your route configuration as follows:
+
+javascript
+Copy code
+<Routes>
+  <Route path="/" element={<Main_Home global_props={global_props} />} />
+  <Route path="/contact-us" element={<Main_Contact_Us global_props={global_props} />} />
+  <Route
+    path="/search"
+    element={<Main_Search global_props={global_props} />}
+  />
+  <Route path="/*" element={<Page_404 global_props={global_props} />} />
+</Routes>z
+Now, you can create a new component Main_Search that will handle search functionality and access the query parameters (e.g., q, sort_by, and limit) using the React Router's useParams hook or by accessing location.search directly. This allows you to access and process the query parameters in your Main_Search component.
+
+Here's an example of how you can access query parameters using the useParams hook:
+
+javascript
+Copy code
+import { useParams } from 'react-router-dom';
+
+function Main_Search(props) {
+  const { q, sort_by, limit } = useParams();
+
+  // Now you can use q, sort_by, and limit in your component
+  // ...
+
+  return (
+    // Your search component JSX here
+  );
+}
+
+export default Main_Search;
+With this setup, visiting a URL like /search?q=example&sort_by=date&limit=10 will allow you to access the q, sort_by, and limit query parameters in your Main_Search component.

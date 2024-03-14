@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+//base
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// stylesheets
+import "./assets/css/main.css";
+
+import Layout_1 from "./ui-layout/layout-1.js"
+
+//config
+import SiteData from "./data/site-data.json";
 
 function App() {
+
+  // store cookie to identify each user
+  // dj99SMO_DISN8byuiJKKMDINinsdfksd_dfna8n23dnujddjniujdqwd8n3i_19js9jso
+
+  const global_props = {
+    SiteData: SiteData,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Routes>
+        <Route path="/*" element={<Layout_1 global_props={global_props} />} />
+      </Routes>
+    </Router>
+    </>
   );
+
 }
 
 export default App;
