@@ -15,12 +15,40 @@ export default function AppFooter(props) {
   const [genres,setGenres] = useState([
     {genre_name: "Test"}
   ])
-  const [countries,setCountries] = useState([
-    {country_name: "Test"}
-  ])
-  const [keywords,setKeywords] = useState([
-    {keyword_name: "Test"}
-  ])
+  const [countries, setCountries] = useState([
+    { country_name: "Nigeria" },
+    { country_name: "Brazil" },
+    { country_name: "Sweden" },
+    { country_name: "Egypt" },
+    { country_name: "Japan" },
+    { country_name: "Australia" },
+    { country_name: "Canada" },
+    { country_name: "Kenya" },
+    { country_name: "Russia" },
+    { country_name: "Argentina" },
+    { country_name: "South Korea" },
+    { country_name: "Mexico" }
+  ]);
+  
+  const [keywords, setKeywords] = useState([
+    { keyword_name: "movies" },
+    { keyword_name: "shorts" },
+    { keyword_name: "comedy" },
+    { keyword_name: "documentaries" },
+    { keyword_name: "war" },
+    { keyword_name: "violence" },
+    { keyword_name: "marvels" },
+    { keyword_name: "kayks" },
+    { keyword_name: "dreamstudio" },
+    { keyword_name: "animations" },
+    { keyword_name: "kids" },
+    { keyword_name: "2023" },
+    { keyword_name: "scary" },
+    { keyword_name: "horror" },
+    { keyword_name: "peace" },
+    { keyword_name: "not for children" }
+  ]);
+  
 
   const global_props = props.global_props;
   const application_socials = global_props['SiteData']['socials']
@@ -136,9 +164,10 @@ export default function AppFooter(props) {
                 Built by{" "}
                 <a
                   className="built_by_me_link"
-                  href="mailto:therealkayks@gmail.com"
+                  href="https://okekedivine.vercel.app"
+                  target="_blank"
                 >
-                  Kayks
+                  Dev Divine
                 </a>
               </div>
             </div>
