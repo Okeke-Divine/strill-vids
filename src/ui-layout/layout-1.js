@@ -21,22 +21,94 @@ import ApiEndpoint1 from "../utlis/axiosConfig.js";
 
 export default function Layout_1(props) {
   const global_props = props.global_props;
-  const [slideShowMovieInfo, setSlideShowMovieInfo] = useState([]);
+  const [slideShowMovieInfo, setSlideShowMovieInfo] = useState([
+    {
+      movie_id: 1,
+      name: "Movie 1",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-1.jpg",
+      average_rating: 4.5,
+      description: "Description of Movie 1"
+    },
+    {
+      movie_id: 2,
+      name: "Movie 2",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-2.jpg",
+      average_rating: 3.8,
+      description: "Description of Movie 2"
+    },
+    {
+      movie_id: 3,
+      name: "Movie 3",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-3.jpg",
+      average_rating: 4.0,
+      description: "Description of Movie 3"
+    },
+    {
+      movie_id: 4,
+      name: "Movie 4",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-4.jpg",
+      average_rating: 4.2,
+      description: "Description of Movie 4"
+    },
+    {
+      movie_id: 5,
+      name: "Movie 5",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-5.jpg",
+      average_rating: 3.9,
+      description: "Description of Movie 5"
+    },
+    {
+      movie_id: 6,
+      name: "Movie 6",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-6.jpg",
+      average_rating: 4.1,
+      description: "Description of Movie 6"
+    },
+    {
+      movie_id: 7,
+      name: "Movie 7",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-7.jpg",
+      average_rating: 4.3,
+      description: "Description of Movie 7"
+    },
+    {
+      movie_id: 8,
+      name: "Movie 8",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-8.jpg",
+      average_rating: 4.4,
+      description: "Description of Movie 8"
+    },
+    {
+      movie_id: 9,
+      name: "Movie 9",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-9.jpg",
+      average_rating: 4.6,
+      description: "Description of Movie 9"
+    },
+    {
+      movie_id: 10,
+      name: "Movie 10",
+      thumbnail_horizontal: "/assets/images/movie-backdrop-10.jpg",
+      average_rating: 4.7,
+      description: "Description of Movie 10"
+    }
+  ]);
+  
   const [movieSlideShowConfigure, setMovieSlideShowConfigure] = useState(null);
 
-  useEffect(() => {
-    async function fetchMovieSlideShowDetails() {
-      try {
-        const response = await ApiEndpoint1.get(
-          "/api/v1/movie/?random=true&total=10"
-        );
-        setSlideShowMovieInfo(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchMovieSlideShowDetails();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchMovieSlideShowDetails() {
+  //     try {
+  //       const response = await ApiEndpoint1.get(
+  //         "/api/v1/movie/?random=true&total=10"
+  //       );
+  //       setSlideShowMovieInfo(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchMovieSlideShowDetails();
+  // }, []);
 
   useEffect(() => {
     if (slideShowMovieInfo.length === 0) {
