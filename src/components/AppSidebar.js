@@ -61,6 +61,21 @@ export default function AppSidebar(props) {
 
           <Link
             onClick={__Execute_OnLinkClick}
+            to="/contact-us"
+            className="sidebar_Link"
+          >
+            <div className="nav_item flex_center">
+              <div>
+                <div className="flex_center">
+                  <i className="fa fa-envelope"></i>
+                </div>
+                <div>Contact</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            onClick={__Execute_OnLinkClick}
             to="/search"
             className="sidebar_Link"
           >
@@ -130,21 +145,6 @@ export default function AppSidebar(props) {
                   <i className="fa fa-heart"></i>
                 </div>
                 <div>My Box</div>
-              </div>
-            </div>
-          </Link>
-
-          <Link
-            onClick={__Execute_OnLinkClick}
-            to="/contact-us"
-            className="sidebar_Link"
-          >
-            <div className="nav_item flex_center">
-              <div>
-                <div className="flex_center">
-                  <i className="fa fa-envelope"></i>
-                </div>
-                <div>Contact</div>
               </div>
             </div>
           </Link>
