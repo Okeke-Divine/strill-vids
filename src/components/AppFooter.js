@@ -12,9 +12,25 @@ import OpenExternalLinks from "../functions/open-external-link.js"
 
 export default function AppFooter(props) {
 
-  const [genres,setGenres] = useState([
-    {genre_name: "Test"}
-  ])
+  const [genres, setGenres] = useState([
+    { genre_name: "Action" },
+    { genre_name: "Adventure" },
+    { genre_name: "Animated" },
+    { genre_name: "Biography" },
+    { genre_name: "Comedy" },
+    { genre_name: "Crime" },
+    { genre_name: "Dance" },
+    { genre_name: "Disaster" },
+    { genre_name: "Documentary" },
+    { genre_name: "Drama" },
+    { genre_name: "Family" },
+    { genre_name: "Fantasy" },
+    { genre_name: "Found Footage" },
+    { genre_name: "Historical" },
+    { genre_name: "Horror" },
+    { genre_name: "Independent" }
+  ]);
+  
   const [countries, setCountries] = useState([
     { country_name: "Nigeria" },
     { country_name: "Brazil" },
