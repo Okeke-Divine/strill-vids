@@ -12,42 +12,48 @@ import OpenExternalLinks from "../functions/open-external-link.js"
 
 export default function AppFooter(props) {
 
-  const [genres,setGenres] = useState([])
-  const [countries,setCountries] = useState([])
-  const [keywords,setKeywords] = useState([])
+  const [genres,setGenres] = useState([
+    {genre_name: "Test"}
+  ])
+  const [countries,setCountries] = useState([
+    {country_name: "Test"}
+  ])
+  const [keywords,setKeywords] = useState([
+    {keyword_name: "Test"}
+  ])
 
   const global_props = props.global_props;
   const application_socials = global_props['SiteData']['socials']
   
-  useEffect(() => {
-    async function fetchGenres() {
-      try{
-        const response = await ApiEndpoint1.get('/api/v1/genres/?random=true&total=16')
-        setGenres(response.data)
-      } catch (error) {
-        console('Error fetching data: ',error)
-      }
-    }
-    async function fetchCountries(){
-      try{
-        const response = await ApiEndpoint1.get('/api/v1/countries/?random=true&total=12')
-        setCountries(response.data)
-      } catch (error) {
-        console.log('Error fetching data: ',error)
-      }
-    }
-    async function fetchKeyword(){
-      try{
-        const response = await ApiEndpoint1.get('api/v1/keyword/?random=true&total=16')
-        setKeywords(response.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchGenres();
-    fetchCountries();
-    fetchKeyword();
-  }, [])
+  // useEffect(() => {
+  //   async function fetchGenres() {
+  //     try{
+  //       const response = await ApiEndpoint1.get('/api/v1/genres/?random=true&total=16')
+  //       setGenres(response.data)
+  //     } catch (error) {
+  //       console('Error fetching data: ',error)
+  //     }
+  //   }
+  //   async function fetchCountries(){
+  //     try{
+  //       const response = await ApiEndpoint1.get('/api/v1/countries/?random=true&total=12')
+  //       setCountries(response.data)
+  //     } catch (error) {
+  //       console.log('Error fetching data: ',error)
+  //     }
+  //   }
+  //   async function fetchKeyword(){
+  //     try{
+  //       const response = await ApiEndpoint1.get('api/v1/keyword/?random=true&total=16')
+  //       setKeywords(response.data)
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   }
+  //   fetchGenres();
+  //   fetchCountries();
+  //   fetchKeyword();
+  // }, [])
 
   return (
     <>
@@ -96,8 +102,8 @@ export default function AppFooter(props) {
                 <div className="title_style_1">MOVIES</div>
                 <div className="line_divider_1"></div>
                 <div className="footer_movie_category_flex">
-                  {genres.map((genre) => (
-                  <AppFooter_movie_item1 type="genre" key={genre.genre_id} name={genre.genre_name} UrlRedirect={UrlRedirect} />
+                  {genres.map((genre,index) => (
+                  <AppFooter_movie_item1 type="genre" key={index} name={genre.genre_name} UrlRedirect={UrlRedirect} />
                   ))}
                 </div>
               </div>
@@ -105,8 +111,8 @@ export default function AppFooter(props) {
                 <div className="title_style_1">TV SHOWS (by country)</div>
                 <div className="line_divider_1"></div>
                 <div className="footer_movie_category_flex">
-                  {countries.map((country) => (
-                    <AppFooter_movie_item1 type="country" name={country.country_name} key={country.country_id} UrlRedirect={UrlRedirect} />
+                  {countries.map((country,index) => (
+                    <AppFooter_movie_item1 type="country" name={country.country_name} key={index} UrlRedirect={UrlRedirect} />
                   ))}
                 </div>
               </div>
@@ -114,8 +120,8 @@ export default function AppFooter(props) {
                 <div className="title_style_1">KEYWORDS</div>
                 <div className="line_divider_1"></div>
                 <div className="footer_movie_category_flex">
-                  {keywords.map((keyword) => (
-                    <Appfooter_tag_component name={keyword.keyword_name} key={keyword.keyword_id} UrlRedirect={UrlRedirect} />
+                  {keywords.map((keyword, index) => (
+                    <Appfooter_tag_component name={keyword.keyword_name} key={index} UrlRedirect={UrlRedirect} />
                   ))}
                 </div>
               </div>
